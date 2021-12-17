@@ -21,7 +21,7 @@ const Layout = (props) => {
                 }
                 else{
                     setResult(input + '=')
-                    setInput(100)
+                    setInput(res)
                 }
             }
         }
@@ -38,7 +38,15 @@ const Layout = (props) => {
             setInput(value)
         }
         else{
-            setInput(input += value)
+            console.log(input);
+            let str = input;
+            if(str === "0"){
+                setInput(value);
+            }
+            else{
+                setInput(input += value)
+            }
+            
         }
 
     }
